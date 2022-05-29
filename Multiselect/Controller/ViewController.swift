@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     let buttonBorderColor = UIColor(red: 61/255, green: 88/255, blue: 133/255, alpha: 1.0).cgColor
     let buttonBorderWidth = 5.0
     let buttonCornerRadius = 20.0
+    let colorCorrectAnswer = UIColor(red: 0/255, green: 200/255, blue: 165/255, alpha: 1.0).cgColor
+    let colorWrongAnswer = UIColor(red: 200/255, green: 59/255, blue: 81/255, alpha: 1.0).cgColor
     
     var quiz = QuizModel()
     
@@ -30,13 +32,32 @@ class ViewController: UIViewController {
     
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        let userAnswer = sender.titleLabel!.text!
-        print(userAnswer)
+        let userAnswer = sender.title(for: .normal)!
+        let isCorrectAnswer = quiz.checkAnswer(userAnswer)
+        
+        if isCorrectAnswer {
+            sender.layer.borderColor = colorCorrectAnswer
+        } else {
+            sender.layer.borderColor = colorWrongAnswer
+        }
+        
+        if quiz.questionNumber == 0 {
+            progressBar.setProgress(0, animated: false)
+        }
+        
+        quiz.getNextQuestion()
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateUIElements), userInfo: nil, repeats: false)
+        
     }
     
-    func updateUIElements() {
+    @objc func updateUIElements() {
         question.text = quiz.getQuestionText()
         createButtons()
+        
+        let answersQuiz = quiz.getAnswersText()
+        answerButtonA.setTitle(answersQuiz[0], for: .normal)
+        answerButtonB.setTitle(answersQuiz[1], for: .normal)
+        answerButtonC.setTitle(answersQuiz[2], for: .normal)
         
         let progress = quiz.getProgress()
         progressBar.setProgress(progress, animated: true)

@@ -54,27 +54,37 @@ struct QuizModel {
     var questionNumber = 0
     var score = 0
     
-    // TODO: Función para checar la respuesta correcta
-    func checkAnswer(_ userAnswer: String) -> Bool {
-        return true
+    mutating func checkAnswer(_ userAnswer: String) -> Bool {
+        if userAnswer == quiz[questionNumber].correctAnswer {
+            score += 1
+            return true
+        }
+        return false
     }
     
     func getQuestionText() -> String {
         return quiz[questionNumber].question
     }
     
-    // TODO: Obtener el progreso
+    func getAnswersText() -> Array<String> {
+        return quiz[questionNumber].answers
+    }
+    
     func getProgress() -> Float {
-        return 0.5
+        return Float(questionNumber + 1) / Float(quiz.count)
     }
     
     func getScore() -> Int {
         return score
     }
     
-    // TODO: Obtener siguiente pregunta
-    func getNextQuestion() {
-        
+    mutating func getNextQuestion() {
+        if questionNumber + 1 < quiz.count {
+            questionNumber += 1
+        } else {
+            questionNumber = 0
+            score = 0
+        }
     }
     
 }
