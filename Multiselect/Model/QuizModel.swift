@@ -59,23 +59,21 @@ struct QuizModel {
         return true
     }
     
-    // TODO: Función para obtener la pregunta
-    func getQuestion() -> String {
-        return "demo"
+    func getQuestionText() -> String {
+        return quiz[questionNumber].question
     }
     
     // TODO: Obtener el progreso
     func getProgress() -> Float {
-        return 0.0
+        return 0.5
     }
     
-    // TODO: Obtener el score
     func getScore() -> Int {
-        return 1
+        return score
     }
     
     // TODO: Obtener siguiente pregunta
-    func nextQuestion() {
+    func getNextQuestion() {
         
     }
     

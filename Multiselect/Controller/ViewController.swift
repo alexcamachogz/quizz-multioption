@@ -21,9 +21,30 @@ class ViewController: UIViewController {
     let buttonBorderWidth = 5.0
     let buttonCornerRadius = 20.0
     
+    var quiz = QuizModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUIElements()
+    }
+    
+    
+    @IBAction func answerPressed(_ sender: UIButton) {
+        let userAnswer = sender.titleLabel!.text!
+        print(userAnswer)
+    }
+    
+    func updateUIElements() {
+        question.text = quiz.getQuestionText()
+        createButtons()
         
+        let progress = quiz.getProgress()
+        progressBar.setProgress(progress, animated: true)
+        
+        score.text = "Score: \(quiz.getScore())"
+    }
+    
+    func createButtons() {
         answerButtonA.layer.borderWidth = buttonBorderWidth
         answerButtonB.layer.borderWidth = buttonBorderWidth
         answerButtonC.layer.borderWidth = buttonBorderWidth
@@ -41,9 +62,5 @@ class ViewController: UIViewController {
         progressBar.clipsToBounds = true
     }
     
-    @IBAction func getAnswerPressed(_ sender: Any) {
-    }
-    
-
 }
 
