@@ -33,17 +33,34 @@ Technologies used in the project:
 *   iOS 15.5
 
 ### Quiz structure
+
 ``` Swift
-  let quiz = [
-    Question(
-        q: "¿Quién pintó Las meninas?",
-        a: ["Francisco de Goya", "Diego Velázquez", "Salvador Dalí"],
-        b: "Diego Velázquez"),
-    Question(
-        q: "¿Cuál es la capital de Hungría?",
-        a: ["Viena", "Praga", "Budapest"],
-        b: "Budapest")
-  ]
+// Question struct
+struct Question {
+  let question: String
+  let answers: Array<String>
+  let correctAnswer: String
+  
+  init(q: String, a: Array<String>, b: String){
+      question = q
+      answers = a
+      correctAnswer = b
+  }
+}
+```
+
+``` Swift
+// Question collection
+let quiz = [
+  Question(
+      q: "¿Quién pintó Las meninas?",
+      a: ["Francisco de Goya", "Diego Velázquez", "Salvador Dalí"],
+      b: "Diego Velázquez"),
+  Question(
+      q: "¿Cuál es la capital de Hungría?",
+      a: ["Viena", "Praga", "Budapest"],
+      b: "Budapest")
+]
 ```
 
 ## Useful resources
