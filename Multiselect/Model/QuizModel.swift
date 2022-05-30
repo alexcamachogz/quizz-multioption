@@ -10,45 +10,45 @@ import Foundation
 struct QuizModel {
     let quiz = [
         Question(
-            q: "Which is the largest organ in the human body?",
-            a: ["Heart", "Skin", "Large Intestine"],
-            b: "Skin"),
+            q: "¿Quién pintó Las meninas?",
+            a: ["Francisco de Goya", "Diego Velázquez", "Salvador Dalí"],
+            b: "Diego Velázquez"),
         Question(
-            q: "Five dollars is worth how many nickels?",
-            a: ["25", "50", "100"],
-            b: "100"),
+            q: "¿Cuál es la capital de Hungría?",
+            a: ["Viena", "Praga", "Budapest"],
+            b: "Budapest"),
         Question(
-            q: "What do the letters in the GMT time zone stand for?",
-            a: ["Global Meridian Time", "Greenwich Mean Time", "General Median Time"],
-            b: "Greenwich Mean Time"),
+            q: "Aproximadamente, ¿cuántos huesos tiene el cuerpo humano?",
+            a: ["40", "390", "208"],
+            b: "208"),
         Question(
-            q: "What is the French word for 'hat'?",
-            a: ["Chapeau", "Écharpe", "Bonnet"],
-            b: "Chapeau"),
+            q: "¿Cuantos continentes hay en el mundo?",
+            a: ["5", "6", "7"],
+            b: "6"),
         Question(
-            q: "In past times, what would a gentleman keep in his fob pocket?",
-            a: ["Notebook", "Handkerchief", "Watch"],
-            b: "Watch"),
+            q: "En tiempos pasados, ¿qué guardaba un caballero en el bolsillo de su llavero?",
+            a: ["Libreta", "Pañuelo", "Reloj"],
+            b: "Reloj"),
         Question(
-            q: "How would one say goodbye in Spanish?",
-            a: ["Au Revoir", "Adiós", "Salir"],
-            b: "Adiós"),
+            q: "¿Cómo se dice adiós en frances?",
+            a: ["Au Revoir", "Adiós", "Bye"],
+            b: "Au Revoir"),
         Question(
-            q: "Which of these colours is NOT featured in the logo for Google?",
-            a: ["Green", "Orange", "Blue"],
-            b: "Orange"),
+            q: "¿Cuál de estos colores no aparece en el logotipo de Platzi?",
+            a: ["Verde", "Naranja", "Blanco"],
+            b: "Naranja"),
         Question(
-            q: "What alcoholic drink is made from molasses?",
-            a: ["Rum", "Whisky", "Gin"],
-            b: "Rum"),
+            q: "¿Qué lenguaje se utiliza para programar aplicaciones para los dispositivos Apple?",
+            a: ["Python", "JavaScript", "Swift"],
+            b: "Swift"),
         Question(
-            q: "What type of animal was Harambe?",
-            a: ["Panda", "Gorilla", "Crocodile"],
-            b: "Gorilla"),
+            q: "¿Quién es el mejor amigo de Harry Potter?",
+            a: ["Draco Malfoy", "Ronald Weasly", "Albus Dombuldore"],
+            b: "Ronald Weasly"),
         Question(
-            q: "Where is Tasmania located?",
-            a: ["Indonesia", "Australia", "Scotland"],
-            b: "Australia")
+            q: "¿En qué país se encuentra Cracovia?",
+            a: ["Eslovaquia", "Austria", "Polonia"],
+            b: "Polonia")
     ]
     
     var questionNumber = 0
