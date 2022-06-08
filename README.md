@@ -13,6 +13,7 @@
   - [Built with](#built-with)
   - [Structure](#quiz-structure)
 - [Useful resources](#useful-resources)
+- [License](#license)
 - [Author](#author)
 
 ## Demo
