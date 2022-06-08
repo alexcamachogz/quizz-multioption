@@ -79,6 +79,10 @@ let quiz = [
 * [Canva](https://www.canva.com) - Used to create graphics.
 * [Classes and Structures](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html) - A guide to Structures and Classes.
 
+## License:
+
+> This project is licensed under the MIT License
+
 ## Author
 
 Made with 💜 by [alexcamachogz](https://twitter.com/alexcamachogz)
