@@ -81,4 +81,4 @@ let quiz = [
 
 ## Author
 
-Alex Camacho - [alexcamachogz](https://twitter.com/alexcamachogz)
+Made with 💜 by [alexcamachogz](https://twitter.com/alexcamachogz)
