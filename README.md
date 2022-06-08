@@ -4,6 +4,17 @@
 
 <p id="description">Quizz is an app that let you response some pre loaded questions and know if your answer is correct or not. You will be able to study using this app to prepare for your exams. You will only need write the questions you need in the QuizModel file.</p>
 
+## Tabla de contenido
+
+- [Demo](#demo)
+- [Features](#features)
+- [Installation Step](#installation-steps)
+- [The process](#the-process)
+  - [Built with](#built-with)
+  - [Structure](#quiz-structure)
+- [Useful resources](#useful-resources)
+- [Author](#author)
+
 ## Demo
 
 ![Quiz](https://media.giphy.com/media/pwVeGTcr39AErOnBOU/giphy.gif)
